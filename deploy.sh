@@ -1,5 +1,7 @@
 #!/bin/bash
 
+BASE_DIR=~/VincentEnvironment
+
 if [ -z "$1" ]; 
 then 
     echo "Argument must be one of [fm|gs|dev]"
@@ -9,19 +11,27 @@ fi
 echo "Deploying $1 environment..."
 
 ##########
-#NGINX
+# NGINX
 #########
 echo "Deploying nginx"
 cd nginx
-sudo cp nginx.conf /etc/nginx/nginx.conf
-sudo cp conf.d/* /etc/nginx/conf.d/
-sudo cp sites-enabled/*$1* /etc/nginx/sites-enabled/
+cp nginx.conf /etc/nginx/nginx.conf
+cp conf.d/* /etc/nginx/conf.d/
+cp sites-enabled/*$1* /etc/nginx/sites-enabled/
 
 if [ "$1" != "dev" ];
 then
-	sudo cp ssl/*$1* /etc/nginx/ssl/
+	cp ssl/*$1* /etc/nginx/ssl/
 fi
 
-sudo service nginx reload
-sudo service nginx restart
+#tell elastic beanstalk that we're using 
+cd /opt/elasticbeanstalk/srv/hostmanager/lib/elasticbeanstalk/hostmanager
+cp utils/apacheutil.rb utils/nginxutil.rb
+sed -i 's/Apache/Nginx/g' utils/nginxutil.rb
+sed -i 's/apache/nginx/g' utils/nginxutil.rb
+sed -i 's/httpd/nginx/g' utils/nginxutil.rb
+
+#reload config files and resatrt the service
+service nginx reload
+service nginx restart
 
