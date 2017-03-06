@@ -22,6 +22,10 @@ then
 	sudo cp ssl/*$1* /etc/nginx/ssl/
 fi
 
+chmod 755 /etc/nginx/conf.d
+chmod 644 /etc/nginx/nginx.conf
+chown -R root.root /etc/nginx/
+
 sudo service nginx reload
 sudo service nginx restart
 
