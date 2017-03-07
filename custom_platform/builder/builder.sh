@@ -43,10 +43,8 @@ install_jq() {
 setup_beanstalk_base() {
     echo "Creating base directories for platform."
     mkdir -p $BEANSTALK_DIR/deploy/appsource/
-    mkdir -p /var/app/staging
-    mkdir -p /var/app/current
+    mkdir -p /var/www/ideaevolver.com/
     mkdir -p /var/log/nginx/healthd/
-    apt-get -y install unzip
 }
 
 sync_platform_uploads() {
