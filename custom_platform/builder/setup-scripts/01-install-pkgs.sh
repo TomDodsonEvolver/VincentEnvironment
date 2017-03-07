@@ -52,6 +52,9 @@ apt-get install -y build-essential >/dev/null
 
 
 ##################
-# EXPECT
+# RABBIT
 #################
-apt-get install -y expect >/dev/null
+apt-get install -y rabbitmq-server >/dev/null
+
+
+

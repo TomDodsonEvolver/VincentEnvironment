@@ -21,11 +21,6 @@
         "destination": "/tmp"
     },
     {
-        "type": "file",
-        "source": "~/.ssh/deploy",
-        "destination": "/tmp/deploy/"
-    },
-    {
         "type": "shell",
         "execute_command": "chmod +x {{ .Path }}; {{ .Vars }} sudo {{ .Path }}",
         "scripts": [
