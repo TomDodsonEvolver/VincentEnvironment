@@ -31,12 +31,7 @@ SETUP_LOGS_DIR="$BUILDER_DIR/uploads/opt/elasticbeanstalk/tasks"
 
 
 ######################
-### NODE CONFIG   ####
-######################
-NODE_DIR="/var/nodejs"
-
-########################
-### CONTAINER CONFIG ###
+## CONTAINER CONFIG ###
 ########################
 CONTAINER_SCRIPTS_DIR="/opt/SampleNodePlatform/bin"
 CONTAINER_CONFIG_FILE_DIR="/etc/SampleNodePlatform"

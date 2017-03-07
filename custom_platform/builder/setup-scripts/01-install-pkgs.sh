@@ -13,12 +13,14 @@
 ###############
 # PYTHON
 ###############
+echo "Installing Python"
 apt install -y python2.7
 
 ###############
 # NGINX
 ###############
 #remove the nginx conf since we need to install nginx first
+echo "Installing nginx"
 rm -rf /etc/nginx/
 
 apt install -y nginx
@@ -33,11 +35,14 @@ chkconfig nginx on
 ####################
 # SUPERVISOR
 ####################
+echo "Installing supervisor"
 apt install -y supervisor
 
 ####################
 # NODE
 ####################
+echo "Installing node"
 curl -sL https://deb.nodesource.com/setup_6.x | bash -
 apt install -y nodejs
 apt install build-essential
+

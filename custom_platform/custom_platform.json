@@ -1,7 +1,5 @@
 {
   "variables": {
-    "aws_access_key": "",
-    "aws_secret_key": "",
     "platform_name": "{{env `AWS_EB_PLATFORM_NAME`}}",
     "platform_version": "{{env `AWS_EB_PLATFORM_VERSION`}}",
     "platform_arn": "{{env `AWS_EB_PLATFORM_ARN`}}"

@@ -8,4 +8,9 @@
 
 #!/bin/bash -xe
 
-apt -y update
+echo "Updating apt packages..."
+apt -y update > /dev/null 2>&1
+
+echo "Upgrading the following packages"
+apt list --upgradable
+apt upgrade -y >/dev/null 2>&1
