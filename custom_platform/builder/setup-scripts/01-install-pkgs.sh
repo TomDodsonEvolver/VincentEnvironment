@@ -14,20 +14,19 @@
 # PYTHON
 ###############
 echo "Installing Python"
-yum -y install python2.7 python-pip python-dev libxml2-dev libxslt-dev libjpeg-dev libz2-dev >/dev/null
+yum -y install git gcc libxml2-devel libxslt-devel libjpeg-devel zlib-devel >/dev/null
+/usr/local/bin/pip install --upgrade pip
 
 #have to install this first to avoid circular dependencies
-pip install pytz==2015.4
-pip install -r requirements.txt
+/usr/local/bin/pip install pytz==2015.4 >/dev/null
+/usr/local/bin/pip install -r $BUILDER_DIR/requirements.txt >/dev/null
 
 ###############
 # NGINX
 ###############
 #remove the nginx conf since we need to install nginx first
 echo "Installing nginx"
-rm -rf /etc/nginx/
-
-yum -y install nginx >/dev/null
+#yum -y install nginx >/dev/null
 
 rsync -ar $BUILDER_DIR/platform-uploads/etc/nginx/ /etc/nginx/
 chmod 755 /etc/nginx/conf.d
@@ -40,21 +39,33 @@ chkconfig nginx on
 # SUPERVISOR
 ####################
 echo "Installing supervisor"
-yum -y install supervisor >/dev/null
+/usr/local/bin/pip install supervisor >/dev/null
+
+mkdir /etc/supervisor
+rsync -ar $BUILDER_DIR/platform-uploads/etc/supervisor/ /etc/supervisor/
+chmod -R 644 /etc/supervisor/
+chown -R root.root /etc/supervisor/
+
+cp $BUILDER_DIR/platform-uploads/etc/init.d/supervisor /etc/init.d/supervisor
+chmod 755 /etc/init.d/supervisor
+chown root.root /etc/init.d/supervisor
+chkconfig --add supervisor
+chkconfig supervisor on
 
 ####################
 # NODE
 ####################
 echo "Installing node"
-curl -sL https://deb.nodesource.com/setup_6.x | bash - >/dev/null
-yum -y install nodejs >/dev/null
-yum -y install build-essential >/dev/null
-
+curl -X GET -o RPM-GPG-KEY-lambda-epll https://lambda-linux.io/RPM-GPG-KEY-lambda-epll
+sudo rpm --import RPM-GPG-KEY-lambda-epll
+curl -X GET -o epll-release-2016.09-1.2.ll1.noarch.rpm https://lambda-linux.io/epll-release-2016.09-1.2.ll1.noarch.rpm
+sudo yum -y install epll-release-2016.09-1.2.ll1.noarch.rpm
+sudo yum --enablerepo=epll-preview -y install nodejs6
 
 ##################
 # RABBIT
 #################
-yum -y install rabbitmq-server >/dev/null
+sudo yum -y install rabbitmq-server --enablerepo=epel >/dev/null
 
-
+chkconfig rabbitmq-server on
 
