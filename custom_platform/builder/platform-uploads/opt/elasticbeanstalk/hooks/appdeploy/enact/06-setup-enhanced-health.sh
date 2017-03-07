@@ -14,21 +14,21 @@ if [ -d /etc/healthd ]
 then
 	# Track Nginx
 	/opt/elasticbeanstalk/bin/healthd-track-pidfile --proxy nginx
-	/opt/elasticbeanstalk/bin/healthd-configure --appstat-log-path /var/log/nginx/healthd/application.log --appstat-uni sec --appstat-timestamp-on 'completion' 
+	# /opt/elasticbeanstalk/bin/healthd-configure --appstat-log-path /var/log/nginx/healthd/application.log --appstat-uni sec --appstat-timestamp-on 'completion'
 
-	RESTART_HEALTHD=''
-	## Track application pids
-	for NAME in `cat $LIVE_DIR/pm2/process.json  | jq '.apps[].name' | sed 's/"//g'`; do 
-		for PID_FILE in `ls $PM2_HOME/pids/ | grep $NAME`; do
-			if [ ! -z "$PID_FILE" ]; then
-				APP=$(echo $PID_FILE | sed 's/.pid//g'); 
-				/opt/elasticbeanstalk/bin/healthd-track-pidfile --name $APP --location $PM2_HOME/pids/$PID_FILE 
-				RESTART_HEALTHD='true'
-			fi
-		done
-	done
+	# RESTART_HEALTHD=''
+	# ## Track application pids
+	# for NAME in `cat $LIVE_DIR/pm2/process.json  | jq '.apps[].name' | sed 's/"//g'`; do
+	# 	for PID_FILE in `ls $PM2_HOME/pids/ | grep $NAME`; do
+	# 		if [ ! -z "$PID_FILE" ]; then
+	# 			APP=$(echo $PID_FILE | sed 's/.pid//g');
+	# 			/opt/elasticbeanstalk/bin/healthd-track-pidfile --name $APP --location $PM2_HOME/pids/$PID_FILE
+	# 			RESTART_HEALTHD='true'
+	# 		fi
+	# 	done
+	# done
 
-	## restart healthd 
+	## restart healthd
 	if [ ! -z "$RESTART_HEALTHD" ]; then
 		/opt/elasticbeanstalk/bin/healthd-restart
 	else

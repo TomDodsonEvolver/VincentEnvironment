@@ -8,27 +8,26 @@
 
 #!/bin/bash -xe
 
-. /etc/SampleNodePlatform/platform.config
 
-if [ -d /etc/healthd ]
-then
-	RESTART_HEALTHD=''
-	## Track application pids
-	for NAME in `cat $LIVE_DIR/pm2/process.json  | jq '.apps[].name' | sed 's/"//g'`; do 
-		for PID_FILE in `ls $PM2_HOME/pids/ | grep $NAME`; do
-			if [ ! -z "$PID_FILE" ]; then
-				APP=$(echo $PID_FILE | sed 's/.pid//g'); 
-				/opt/elasticbeanstalk/bin/healthd-track-pidfile --name $APP --location $PM2_HOME/pids/$PID_FILE 
-				RESTART_HEALTHD='true'
-			fi
-		done
-	done
+# if [ -d /etc/healthd ]
+# then
+# 	RESTART_HEALTHD=''
+# 	## Track application pids
+# 	for NAME in `cat $LIVE_DIR/pm2/process.json  | jq '.apps[].name' | sed 's/"//g'`; do
+# 		for PID_FILE in `ls $PM2_HOME/pids/ | grep $NAME`; do
+# 			if [ ! -z "$PID_FILE" ]; then
+# 				APP=$(echo $PID_FILE | sed 's/.pid//g');
+# 				/opt/elasticbeanstalk/bin/healthd-track-pidfile --name $APP --location $PM2_HOME/pids/$PID_FILE
+# 				RESTART_HEALTHD='true'
+# 			fi
+# 		done
+# 	done
 
-	## restart healthd 
-	if [ ! -z "$RESTART_HEALTHD" ]; then
-		/opt/elasticbeanstalk/bin/healthd-restart
-	else
-		echo "Not restarting HealthD since no processes to track"
-		exit 1
-	fi
-fi
+# 	## restart healthd
+# 	if [ ! -z "$RESTART_HEALTHD" ]; then
+# 		/opt/elasticbeanstalk/bin/healthd-restart
+# 	else
+# 		echo "Not restarting HealthD since no processes to track"
+# 		exit 1
+# 	fi
+# fi

@@ -8,8 +8,6 @@
 
 #!/bin/bash
 
-. /etc/SampleNodePlatform/platform.config
-
 if /opt/elasticbeanstalk/bin/download-source-bundle; then
 	rm -rf $STAGING_DIR
 	mkdir -p $STAGING_DIR

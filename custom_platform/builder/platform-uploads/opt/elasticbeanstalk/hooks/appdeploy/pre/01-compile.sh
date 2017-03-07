@@ -8,9 +8,7 @@
 
 #!/bin/bash
 
-. /etc/SampleNodePlatform/platform.config
-
-cd $STAGING_DIR
-mkdir pm2
-$NODE_DIR/bin/npm install
+# cd $STAGING_DIR
+# mkdir pm2
+# $NODE_DIR/bin/npm install
 

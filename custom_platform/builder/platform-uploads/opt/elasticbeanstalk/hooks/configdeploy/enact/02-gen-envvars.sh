@@ -9,8 +9,6 @@
 
 #!/bin/bash
 
-. /etc/SampleNodePlatform/platform.config
-
 mkdir -p $CONFIG_DIR
 rm -f $CONFIG_DIR/envvars.json
 
