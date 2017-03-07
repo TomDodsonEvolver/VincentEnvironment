@@ -10,12 +10,10 @@
 
 . $BUILDER_DIR/CONFIG
 
-apt install -y wget tree git
+apt-get install -y wget tree git
 
 echo "Creating base directories for platform."
-mkdir -p $BEANSTALK_DIR/deploy/appsource/
-mkdir -p /var/app/staging
-mkdir -p /var/app/current
-mkdir -p /var/log/nginx/healthd/
-chown nginx.nginx /var/log/nginx/healthd/
+mkdir -p /var/www/ideaevolver.com
+chown www.data.adm /var/www/ideaevolver.com
+chown www-data.adm /var/log/nginx/healthd/
 

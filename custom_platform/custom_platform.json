@@ -12,13 +12,18 @@
         "source_ami": "ami-fce3c696",
         "instance_type": "t2.micro",
         "ssh_username": "ubuntu",
-        "ami_name": "Vincent Server+Worker {{timestamp}}"
+        "ami_name": "Vincent ServerWorker {{timestamp}}"
     }],
     "provisioners": [
     {
         "type": "file",
         "source": "builder",
         "destination": "/tmp"
+    },
+    {
+        "type": "file",
+        "source": "~/.ssh/deploy",
+        "destination": "/tmp/deploy/"
     },
     {
         "type": "shell",
