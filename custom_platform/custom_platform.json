@@ -12,7 +12,7 @@
         "source_ami": "ami-fce3c696",
         "instance_type": "t2.micro",
         "ssh_username": "ubuntu",
-        "ami_name": "{{env `AWS_EB_PLATFORM_NAME`}} v{{env `AWS_EB_PLATFORM_VERSION`}} {{timestamp}}"
+        "ami_name": "Vincent Server+Worker {{timestamp}}"
     }],
     "provisioners": [
     {

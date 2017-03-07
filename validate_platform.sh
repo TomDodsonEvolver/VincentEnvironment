@@ -3,5 +3,5 @@
 source aws_config.sh
 
 cd custom_platform
-ebp create
+packer validate custom_platform.json
 
