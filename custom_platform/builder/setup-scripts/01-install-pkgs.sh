@@ -14,7 +14,7 @@
 # PYTHON
 ###############
 echo "Installing Python"
-apt-get install -y python2.7 python-pip python-dev libxml2-dev libxslt-dev libjpeg-dev libz-dev >/dev/null
+yum -y install python2.7 python-pip python-dev libxml2-dev libxslt-dev libjpeg-dev libz2-dev >/dev/null
 
 #have to install this first to avoid circular dependencies
 pip install pytz==2015.4
@@ -27,7 +27,7 @@ pip install -r requirements.txt
 echo "Installing nginx"
 rm -rf /etc/nginx/
 
-apt-get install -y nginx >/dev/null
+yum -y install nginx >/dev/null
 
 rsync -ar $BUILDER_DIR/platform-uploads/etc/nginx/ /etc/nginx/
 chmod 755 /etc/nginx/conf.d
@@ -40,21 +40,21 @@ chkconfig nginx on
 # SUPERVISOR
 ####################
 echo "Installing supervisor"
-apt-get install -y supervisor >/dev/null
+yum -y install supervisor >/dev/null
 
 ####################
 # NODE
 ####################
 echo "Installing node"
 curl -sL https://deb.nodesource.com/setup_6.x | bash - >/dev/null
-apt-get install -y nodejs >/dev/null
-apt-get install -y build-essential >/dev/null
+yum -y install nodejs >/dev/null
+yum -y install build-essential >/dev/null
 
 
 ##################
 # RABBIT
 #################
-apt-get install -y rabbitmq-server >/dev/null
+yum -y install rabbitmq-server >/dev/null
 
 
 
