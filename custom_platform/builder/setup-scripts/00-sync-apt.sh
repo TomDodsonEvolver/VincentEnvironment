@@ -8,12 +8,7 @@
 
 #!/bin/bash -xe
 
-. $BUILDER_DIR/CONFIG
+echo "Updating apt packages..."
+apt-get -y update > /dev/null
 
-apt-get install -y wget tree git
-
-echo "Creating base directories for platform."
-mkdir -p /var/www/ideaevolver.com
-chown www.data.adm /var/www/ideaevolver.com
-chown www-data.adm /var/log/nginx/healthd/
 
