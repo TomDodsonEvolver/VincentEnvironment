@@ -12,19 +12,10 @@
 
 yum -y install wget tree
 
-chkconfig --add nginx
-chkconfig nginx on
-
-chkconfig --add supervisor
-chkconfig supervisor on
-
-chkconfig --add rabbitmq-server
-chkconfig rabbitmq-server on
-
 echo "Creating base directories for platform."
 mkdir -p /var/www/ideaevolver.com
-chown nginx /var/www/ideaevolver.com
-chown -R nginx /var/log/nginx/
+chown www.data /var/www/ideaevolver.com
+chown -R www-data /var/log/nginx/
 
 service nginx start
 service rabbitmq-server start

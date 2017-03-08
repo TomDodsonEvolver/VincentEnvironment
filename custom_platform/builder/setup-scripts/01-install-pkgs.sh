@@ -15,8 +15,7 @@
 ###############
 echo "Installing Python"
 yum -y install git gcc libxml2-devel libxslt-devel libjpeg-devel zlib-devel >/dev/null
-
-pip install --upgrade pip
+/usr/local/bin/pip install --upgrade pip
 
 #have to install this first to avoid circular dependencies
 /usr/local/bin/pip install pytz==2015.4 >/dev/null
@@ -34,14 +33,15 @@ chmod 755 /etc/nginx/conf.d
 chmod 644 /etc/nginx/nginx.conf
 chown -R root.root /etc/nginx/
 
+chkconfig nginx on
+
 ####################
 # SUPERVISOR
 ####################
 echo "Installing supervisor"
 /usr/local/bin/pip install supervisor >/dev/null
 
-rm -rf /etc/supervisor
-mkdir -p /etc/supervisor/
+mkdir /etc/supervisor
 rsync -ar $BUILDER_DIR/platform-uploads/etc/supervisor/ /etc/supervisor/
 chmod -R 644 /etc/supervisor/
 chown -R root.root /etc/supervisor/
@@ -49,9 +49,8 @@ chown -R root.root /etc/supervisor/
 cp $BUILDER_DIR/platform-uploads/etc/init.d/supervisor /etc/init.d/supervisor
 chmod 755 /etc/init.d/supervisor
 chown root.root /etc/init.d/supervisor
-
-mkdir -p /var/log/supervisor
-chown root.root /var/log/supervisor
+chkconfig --add supervisor
+chkconfig supervisor on
 
 ####################
 # NODE
@@ -66,4 +65,7 @@ sudo yum --enablerepo=epll-preview -y install nodejs6
 ##################
 # RABBIT
 #################
-sudo yum -y install rabbitmq-server --enablerepo=epel
+sudo yum -y install rabbitmq-server --enablerepo=epel >/dev/null
+
+chkconfig rabbitmq-server on
+
