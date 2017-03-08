@@ -63,7 +63,8 @@ prepare_platform_base() {
 
 run_setup_scripts() {
     for entry in $( ls $BUILDER_DIR/setup-scripts/*.sh | sort ) ; do
-        run_command $entry
+        #redirect stdout to /dev/null to make things a little less verbose
+        run_command $entry > /dev/null
     done
 }
 

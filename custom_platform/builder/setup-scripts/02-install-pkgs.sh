@@ -13,10 +13,16 @@
 ###############
 # PYTHON
 ###############
-echo "Installing Python"
-apt-get install -y python2.7 python-pip python-dev libxml2-dev libxslt-dev libjpeg-dev libz-dev >/dev/null
+echo "Setting up Python virtual environment"
+#dependeicnies for requirements
+apt-get install -y libxml2-dev libxslt-dev libjpeg-dev libz-dev >/dev/null
+sudo apt-get install -y autotools-dev blt-dev bzip2 dpkg-dev g++-multilib gcc-multilib libbluetooth-dev libbz2-dev \
+     libexpat1-dev libffi-dev libffi6  libffi6-db libgdbm-de libgpm2  libncurses libreadlin libsqlite3 libssl-dev \
+     libtinfo-d mime-suppo net-tools netbase python-cry python-mox python-pil python-ply quilt tk-dev zlib1g-dev
 
-#have to install this first to avoid circular dependencies
+
+#install requirements
+# have to install this first to avoid circular dependencies
 pip install pytz==2015.4
 pip install -r requirements.txt
 
