@@ -19,10 +19,6 @@ GROUP=ubuntu
 ####################
 USE_SELINUX=false
 
-VENV_DIR=/opt/environments/
-PYTHON_VENV_NAME=python2713
-PYTHON_VENV_DIR=$VENV_DIR/$PYTHON_VENV_NAME
-
 # function to print to stderr
 echostderr() { cat <<< "$@" 1>&2; }
 
