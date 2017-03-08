@@ -18,7 +18,7 @@ apt-get install -y python2.7 python-pip python-dev libxml2-dev libxslt-dev libjp
 
 #have to install this first to avoid circular dependencies
 pip install pytz==2015.4
-pip install -r requirements.txt
+pip install -r $BUILDER_DIR/requirements.txt
 
 ###############
 # NGINX
@@ -33,8 +33,6 @@ rsync -ar $BUILDER_DIR/platform-uploads/etc/nginx/ /etc/nginx/
 chmod 755 /etc/nginx/conf.d
 chmod 644 /etc/nginx/nginx.conf
 chown -R root.root /etc/nginx/
-
-chkconfig nginx on
 
 ####################
 # SUPERVISOR
@@ -54,6 +52,7 @@ apt-get install -y build-essential >/dev/null
 ##################
 # RABBIT
 #################
+echo "Installing RabbitMQ"
 apt-get install -y rabbitmq-server >/dev/null
 
 
