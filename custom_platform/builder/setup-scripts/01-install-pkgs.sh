@@ -57,13 +57,13 @@ chown root.root /var/log/supervisor
 # NODE
 ####################
 echo "Installing node"
-curl -X GET -o RPM-GPG-KEY-lambda-epll https://lambda-linux.io/RPM-GPG-KEY-lambda-epll
-sudo rpm --import RPM-GPG-KEY-lambda-epll
-curl -X GET -o epll-release-2016.09-1.2.ll1.noarch.rpm https://lambda-linux.io/epll-release-2016.09-1.2.ll1.noarch.rpm
-sudo yum -y install epll-release-2016.09-1.2.ll1.noarch.rpm
-sudo yum --enablerepo=epll-preview -y install nodejs6
+curl -X GET -o RPM-GPG-KEY-lambda-epll https://lambda-linux.io/RPM-GPG-KEY-lambda-epll >/dev/null
+sudo rpm --import RPM-GPG-KEY-lambda-epll >/dev/null
+curl -X GET -o epll-release-2016.09-1.2.ll1.noarch.rpm https://lambda-linux.io/epll-release-2016.09-1.2.ll1.noarch.rpm >/dev/null
+sudo yum -y install epll-release-2016.09-1.2.ll1.noarch.rpm >/dev/null
+sudo yum --enablerepo=epll-preview -y install nodejs6 >/dev/null
 
 ##################
 # RABBIT
 #################
-sudo yum -y install rabbitmq-server --enablerepo=epel
+sudo yum -y install rabbitmq-server --enablerepo=epel >/dev/null
