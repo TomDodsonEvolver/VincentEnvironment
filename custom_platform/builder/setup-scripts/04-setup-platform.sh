@@ -10,13 +10,10 @@
 
 . $BUILDER_DIR/CONFIG
 
-yum -y install wget tree
+yum -y install wget tree git
 
 echo "Creating base directories for platform."
 mkdir -p /var/www/ideaevolver.com
-chown www.data /var/www/ideaevolver.com
-chown -R www-data /var/log/nginx/
+chown www.data.adm /var/www/ideaevolver.com
+chown www-data.adm /var/log/nginx/healthd/
 
-service nginx start
-service rabbitmq-server start
-service supervisor start
