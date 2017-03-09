@@ -8,47 +8,6 @@
 
 #!/bin/bash
 
-. $BUILDER_DIR/CONFIG
-
-###############
-# PYTHON
-###############
-echo "Installing Python"
-apt-get install -y libxml2-dev libxslt-dev libjpeg-dev libz-dev >/dev/null
-
-#have to install this first to avoid circular dependencies
-pip install pytz==2015.4
-pip install -r $BUILDER_DIR/requirements.txt
-
-###############
-# NGINX
-###############
-#remove the nginx conf since we need to install nginx first
-echostderr "Installing nginx"
-rm -rf /etc/nginx/
-
-apt-get install -y nginx
-
-rsync -ar $BUILDER_DIR/platform-uploads/etc/nginx/ /etc/nginx/
-chmod 755 /etc/nginx/conf.d
-chmod 644 /etc/nginx/nginx.conf
-chown -R root.root /etc/nginx/
-
-####################
-# SUPERVISOR
-####################
-echostderr "Installing supervisor"
-apt-get install -y supervisor
-
-####################
-# NODE
-####################
-echostderr "Installing node"
-curl -sL https://deb.nodesource.com/setup_6.x | bash -
-apt-get install -y nodejs
-apt-get install -y build-essential
-
-
 ##################
 # RABBIT
 #################

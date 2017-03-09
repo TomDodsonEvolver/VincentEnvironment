@@ -10,7 +10,6 @@
 
 . $BUILDER_DIR/CONFIG
 
-echo "Creating base directories for platform."
-mkdir -p /var/www/ideaevolver.com
-chown www-data.adm /var/www/ideaevolver.com
-chown www-data.adm /var/log/nginx/healthd/
+echostderr "Setting up worker environent"
+
+#nothing here right now

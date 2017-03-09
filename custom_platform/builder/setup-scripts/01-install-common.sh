@@ -15,3 +15,9 @@ echostderr "Installing dependencies via pip"
 # have to install this first to avoid circular dependencies
 pip install pytz==2015.4
 pip install -r $BUILDER_DIR/requirements.txt
+
+####################
+# SUPERVISOR
+####################
+echostderr "Installing supervisor"
+apt-get install -y supervisor
