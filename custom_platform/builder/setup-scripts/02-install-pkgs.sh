@@ -14,7 +14,7 @@
 # PYTHON
 ###############
 echo "Installing Python"
-apt-get install -y python2.7 python-pip python-dev libxml2-dev libxslt-dev libjpeg-dev libz-dev >/dev/null
+apt-get install -y libxml2-dev libxslt-dev libjpeg-dev libz-dev >/dev/null
 
 #have to install this first to avoid circular dependencies
 pip install pytz==2015.4
@@ -24,10 +24,10 @@ pip install -r $BUILDER_DIR/requirements.txt
 # NGINX
 ###############
 #remove the nginx conf since we need to install nginx first
-echo "Installing nginx"
+echostderr "Installing nginx"
 rm -rf /etc/nginx/
 
-apt-get install -y nginx >/dev/null
+apt-get install -y nginx
 
 rsync -ar $BUILDER_DIR/platform-uploads/etc/nginx/ /etc/nginx/
 chmod 755 /etc/nginx/conf.d
@@ -37,23 +37,31 @@ chown -R root.root /etc/nginx/
 ####################
 # SUPERVISOR
 ####################
-echo "Installing supervisor"
-apt-get install -y supervisor >/dev/null
+echostderr "Installing supervisor"
+apt-get install -y supervisor
 
 ####################
 # NODE
 ####################
-echo "Installing node"
-curl -sL https://deb.nodesource.com/setup_6.x | bash - >/dev/null
-apt-get install -y nodejs >/dev/null
-apt-get install -y build-essential >/dev/null
+echostderr "Installing node"
+curl -sL https://deb.nodesource.com/setup_6.x | bash -
+apt-get install -y nodejs
+apt-get install -y build-essential
 
 
 ##################
 # RABBIT
 #################
 echo "Installing RabbitMQ"
-apt-get install -y rabbitmq-server >/dev/null
+apt-get install -y rabbitmq-server
 
-
+#################
+# Mongo
+#################
+echostderr "Installing Mongo"
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 0C49F3730359A14518585931BC711F9BA15703C6
+echo "deb [ arch=amd64,arm64 ] http://repo.mongodb.org/apt/ubuntu "$(lsb_release -sc)"/mongodb-org/3.4 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-3.4.list
+apt-get update
+apt-get install -y mongodb-org
+service mondgod start
 

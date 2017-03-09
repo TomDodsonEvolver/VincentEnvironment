@@ -23,7 +23,7 @@ wait_for_cloudinit() {
 run_command () {
     echo "Running script [$1]"
     chmod +x $1
-    (cd $BUILDER_DIR/setup-scripts; BUILDER_DIR=$BUILDER_DIR $1 )
+    (cd $BUILDER_DIR/setup-scripts; BUILDER_DIR=$BUILDER_DIR $1 ) > /tmp/build.log
     if [ $? -ne "0" ]; then
         echo "Exiting. Failed to execute [$1]"
         exit 1
@@ -63,6 +63,7 @@ prepare_platform_base() {
 
 run_setup_scripts() {
     for entry in $( ls $BUILDER_DIR/setup-scripts/*.sh | sort ) ; do
+        #redirect stdout to /dev/null to make things a little less verbose
         run_command $entry
     done
 }

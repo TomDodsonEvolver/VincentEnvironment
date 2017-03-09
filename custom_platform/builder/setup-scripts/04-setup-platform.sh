@@ -10,10 +10,7 @@
 
 . $BUILDER_DIR/CONFIG
 
-apt-get install -y wget tree git
-
 echo "Creating base directories for platform."
 mkdir -p /var/www/ideaevolver.com
-chown www.data.adm /var/www/ideaevolver.com
+chown www-data.adm /var/www/ideaevolver.com
 chown www-data.adm /var/log/nginx/healthd/
-
