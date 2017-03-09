@@ -11,56 +11,47 @@
 . $BUILDER_DIR/CONFIG
 
 ###############
-# PYTHON
-###############
-echo "Setting up Python virtual environment"
-#dependeicnies for requirements
-apt-get install -y libxml2-dev libxslt-dev libjpeg-dev libz-dev >/dev/null
-sudo apt-get install -y autotools-dev blt-dev bzip2 dpkg-dev g++-multilib gcc-multilib libbluetooth-dev libbz2-dev \
-     libexpat1-dev libffi-dev libffi6  libffi6-db libgdbm-de libgpm2  libncurses libreadlin libsqlite3 libssl-dev \
-     libtinfo-d mime-suppo net-tools netbase python-cry python-mox python-pil python-ply quilt tk-dev zlib1g-dev
-
-
-#install requirements
-# have to install this first to avoid circular dependencies
-pip install pytz==2015.4
-pip install -r requirements.txt
-
-###############
 # NGINX
 ###############
 #remove the nginx conf since we need to install nginx first
-echo "Installing nginx"
+echostderr "Installing nginx"
 rm -rf /etc/nginx/
 
-apt-get install -y nginx >/dev/null
+apt-get install -y nginx
 
 rsync -ar $BUILDER_DIR/platform-uploads/etc/nginx/ /etc/nginx/
 chmod 755 /etc/nginx/conf.d
 chmod 644 /etc/nginx/nginx.conf
 chown -R root.root /etc/nginx/
 
-chkconfig nginx on
-
 ####################
 # SUPERVISOR
 ####################
-echo "Installing supervisor"
-apt-get install -y supervisor >/dev/null
+echostderr "Installing supervisor"
+apt-get install -y supervisor
 
 ####################
 # NODE
 ####################
-echo "Installing node"
-curl -sL https://deb.nodesource.com/setup_6.x | bash - >/dev/null
-apt-get install -y nodejs >/dev/null
-apt-get install -y build-essential >/dev/null
+echostderr "Installing node"
+curl -sL https://deb.nodesource.com/setup_6.x | bash -
+apt-get install -y nodejs
+apt-get install -y build-essential
 
 
 ##################
 # RABBIT
 #################
-apt-get install -y rabbitmq-server >/dev/null
+echostderr "Installing Rabbit"
+apt-get install -y rabbitmq-server
 
-
+#################
+# Mongo
+#################
+echostderr "Installing Mongo"
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 0C49F3730359A14518585931BC711F9BA15703C6
+echo "deb [ arch=amd64,arm64 ] http://repo.mongodb.org/apt/ubuntu "$(lsb_release -sc)"/mongodb-org/3.4 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-3.4.list
+apt-get update
+apt-get install -y mongodb-org
+service mondgod start
 

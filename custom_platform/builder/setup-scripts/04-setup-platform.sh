@@ -12,8 +12,5 @@
 
 echo "Creating base directories for platform."
 mkdir -p /var/www/ideaevolver.com
-chown www.data.adm /var/www/ideaevolver.com
+chown www-data.adm /var/www/ideaevolver.com
 chown www-data.adm /var/log/nginx/healthd/
-
-chown -R $USER.$GROUP $PYTHON_VENV_DIR
-chmod 775 -R $PYTHON_VENV_DIR

@@ -8,7 +8,13 @@
 
 #!/bin/bash -xe
 
-echo "Updating apt packages..."
-apt-get -y update > /dev/null
+. $BUILDER_DIR/CONFIG
 
+#gets rid of a bunch of annoying not-error messages apt prints to stderr
+echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections
 
+echostderr "Running as `id -u -n`"
+echostderr "Running in `pwd`"
+
+echostderr "Updating apt packages..."
+apt-get -y update

@@ -20,5 +20,4 @@ GROUP=ubuntu
 USE_SELINUX=false
 
 # function to print to stderr
-echostderr() { cat <<< "$@" 1>&2; }
-
+echostderr() { printf "%s\n" "$*" >&2; }
