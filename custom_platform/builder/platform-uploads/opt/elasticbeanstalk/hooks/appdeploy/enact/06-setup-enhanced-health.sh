@@ -8,8 +8,6 @@
 
 #!/bin/bash -xe
 
-. /etc/SampleNodePlatform/platform.config
-
 if [ -d /etc/healthd ]
 then
 	# Track Nginx

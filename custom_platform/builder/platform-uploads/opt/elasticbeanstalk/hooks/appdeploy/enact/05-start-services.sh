@@ -6,6 +6,11 @@
 #
 #   or in the "license" file accompanying this file. This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
 
-#!/bin/sh
+#!/bin/bash
 
-echo "[Configuration Deployment] Executed when starting configuration deployment"
+echo "Starting Nginx"
+service nginx start
+
+echo "Reloading and restarting supervisor managed processes"
+supervisorctl reload
+supervisorctl restart all

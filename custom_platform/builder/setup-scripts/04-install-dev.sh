@@ -8,6 +8,10 @@
 
 #!/bin/bash
 
+. $BUILDER_DIR/CONFIG
+
+echostderr "Setting up development environment"
+
 ##################
 # RABBIT
 #################

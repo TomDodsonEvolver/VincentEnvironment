@@ -6,12 +6,7 @@
 #
 #   or in the "license" file accompanying this file. This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
 
+#!/bin/sh
 
-#!/bin/bash
-
-. /etc/SampleNodePlatform/platform.config
-
-mkdir -p $CONFIG_DIR
-rm -f $CONFIG_DIR/envvars.json
-
-$EB_DIR/bin/get-config optionsettings > $CONFIG_DIR/envvars.json
+echo "[Configuration Deployment] Executed when starting configuration deployment"
+service mongod start

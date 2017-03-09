@@ -20,4 +20,4 @@ GROUP=ubuntu
 USE_SELINUX=false
 
 # function to print to stderr
-echostderr() { printf "%s\n" "$*" >&2; }
+echostderr() { printf "    VINCENT:    %s\n" "$*" >&2; }
