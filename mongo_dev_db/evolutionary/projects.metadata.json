@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":1,"key":{"_id":1},"name":"_id_","ns":"evolutionary.projects"},{"v":1,"key":{"labels":1},"name":"labels_1","ns":"evolutionary.projects","background":true}]}

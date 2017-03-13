@@ -1,0 +1,1191 @@
+/*
+#  . _| _  _  _  _ | _  _
+#  |(_|(/_(_|(/\(_)\(/_| 
+#
+(c) Copyright 2013 Idea-Evolver, LLC All Rights Reserved.
+*/
+
+/* Eric Meyer CSS Resets: v1.0 | 20080212 */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0; padding: 0;
+    border: 0; outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+body {
+    line-height: 1;
+    font-family: sans-serif;
+    color: rgba(2, 50, 71, 1);
+    /*background: rgba(255, 255, 255, .5);
+        background-image: url('../images/galactic-fabric-white.png');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center top;*/
+}
+    ol, ul {list-style: none;}
+    blockquote, q {quotes: none;}
+    blockquote:before,
+    blockquote:after,
+    q:before,
+    q:after {content: ''; content: none;}
+
+    :focus {outline: 0;} /*define focus styles!*/
+    ins {text-decoration: none;} /*highlight inserts somehow!*/
+    del {text-decoration: line-through;}
+    table {border-collapse: collapse;   border-spacing: 0;}
+/*Eric Meyer CSS Resets: v1.0 | 20080212*/    
+/*Global Options ~sd*/
+cite {font-style: normal;}
+sup {font-size: 60%;}
+.hide {display: none;}
+.hova0:hover {cursor: pointer;}
+/*-----------------------------------------------------------------*/
+
+
+/*++++++++++++++++++++++++++ OPEN >> GLOBALS ++++++++++++++++++++++*/
+/*Styles for ALL Experiences*/
+
+/*body {font-family: Montserrat;}*/
+h1, h2, h3, h4, h5, h6, header, th {font-family: Montserrat;}
+h1 img {height: 1em; margin-left: 2%;}
+
+/*+++++ MAIN WRAPPER +++++*/
+#wrapper {
+    clear: left; float: left;
+    width: 100%;
+    margin: 0; padding: 0;
+}
+/* +++++ Header +++++ */
+header {
+    z-index: 3001;
+    float: left;
+    width: 100%;
+    margin: 0 0 1em 0; padding: .25em 0;
+    background: rgba(2, 50, 71, 1);
+    border-bottom: 2px solid rgba(12, 171, 187, .7);
+/*    -webkit-box-shadow: 0px 2px 3px rgba(12, 171, 187, 0.75);
+    -moz-box-shadow:    0px 2px 3px rgba(12, 171, 187, 0.75);
+    box-shadow:         0px 2px 3px rgba(12, 171, 187, 0.75); */
+}
+    /* ++ Navigation ++ */
+    /* <> */
+    header nav {float: right;}
+    header nav > ol {float: right; margin: 0;}
+    header nav > ol > li {
+        display: block;
+        clear: none; float: left;
+        margin: 0; padding: 0;
+        border-left: 1px dotted rgba(12, 171, 187, .7);
+    }
+    header nav > ol > li:last-child {padding-right: 1em;}
+        /*header nav > ol > li:last-child:hover {}*/
+    header nav > ol > li a {
+        display: block;
+        margin: 0; padding: 0;
+    }
+    img.V {height: 3.4em; padding-left: 1em;} /* <> logo */
+    /* <> */
+        
+            /* IE Logo */
+            img.logo {float: left; height: 3.5em; /*margin: .15em;*/}
+            /* Navigation dropdown options */
+            header nav div.navOptions {
+                z-index: 2000;
+                position: absolute; right: 0; top: 4.2em;
+                padding: 0;
+                background: rgba(2, 50, 71, 1);
+            }
+            header nav div.navOptions > ol > li {
+                display: block;
+                clear: right; float: right;
+                width: 10em;
+                text-align: right;
+            }
+            header nav div.navOptions > ol > li a {
+                display: block;
+                margin: 0; padding: .6em 1em .4em 1em;
+                border-left: 1px solid #0cabbb; /*border-right: 1px solid #0cabbb;*/
+                background: rgba(2, 50, 71, .7); color: #f0fafb;
+                font-family: helvetica ; font-size: 100%; text-decoration: none;
+            }
+            header nav div.navOptions > ol > li:last-child a {border-bottom: 1px solid #0cabbb;}
+            header nav div.navOptions > ol > li a:hover {
+                background: rgba(255, 255, 255, .9);
+                color: rgba(2, 50, 71, 1);
+            }
+    /* -- Navigation -- */
+/* ----- CLOSE >> HEADER ----- */
+
+/* ++++++++++++++++++++ OPEN >> CONTENT BODY ++++++++++++++++++++ */
+#bodied {
+    width: 100%;
+    margin: 0; padding: 0;
+}
+    #bodied h1 {font-size: 170%; padding: 0 0 .125em 0;}
+        #bodied h1.loadingVisual {
+        clear: left; float: left;
+        width: 98%;
+        font-size: 200%; padding: 1%; margin-top: 0; margin-bottom: 1%;
+        background: rgba(12,171,187, 0.1);
+        border-bottom: 1px dotted rgba(12,171,187,.5);
+    }
+    #bodied h2 {font-size: 125%;}
+        #bodied h2.lastRefresh {font-size: 85%; margin: 0; padding: 0;}
+    #bodied h3 {font-size: 120%;}
+    #bodied h4 {font-size: 110%;}
+    #bodied h5 {font-size: 100%;}
+    #bodied h6 {font-size: 85%;}
+    
+    #bodied p {font-size: 100%;}
+    #bodied ul li, 
+    #bodied ol li {font-size: 95%;}
+    
+    #bodied a:link {color: rgba(12, 171, 187, 1);}
+    #bodied a:visited {color: rgba(12, 171, 187, .8);}
+    #bodied a:hover {color: rgba(241, 102, 57, 1);}
+    #bodied a:active {background: rgba(241, 102, 57, .2);}
+
+
+/* +++++ Forms +++++ */
+input, textarea, select {
+    padding: .5%;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    /*background: rgba(255, 255, 255, .3);
+    color: rgba(255, 255, 255, .9);*/ /*keep brighter than placeholder text color below */
+    color: rgba(2, 50, 71, .7);
+    border: 1px solid rgba(2, 50, 71, .25);
+        /* GLOW */
+        -moz-box-shadow: 0px 0px 2px rgba(2, 50, 71, .35);
+        -webkit-box-shadow: 0px 0px 2px rgba(2, 50, 71, .35);
+        box-shadow: 0px 0px 2px rgba(2, 50, 71, .35);
+}
+    input:focus, textarea:focus, select:focus {
+        color: rgba(2, 50, 71, .9);
+        border-color: rgba(12, 171, 187, .5);
+        /* GLOW */
+        -moz-box-shadow: 0px 0px 4px rgba(12, 171, 187, .75);
+        -webkit-box-shadow: 0px 0px 4px rgba(12, 171, 187, .75);
+        box-shadow: 0px 0px 4px rgba(12, 171, 187, .75);
+    }
+    
+/* Placeholder text */
+::-webkit-input-placeholder {/*color: rgba(255, 255, 255, .5);*/}
+::-moz-placeholder {/*color: rgba(255, 255, 255, .5);*/} /* firefox 19+ */
+:-ms-input-placeholder {/*color: rgba(255, 255, 255, .5);*/} /* ie */
+input:-moz-placeholder {/*color: rgba(255, 255, 255, .5);*/}
+
+    
+    input[type=submit] {/*background: #efefef;*/ border: 1px solid #ccc;}
+    input[type=submit]:hover {cursor: pointer; border-color: #104e87;}
+
+input[type=radio], 
+input[type=checkbox] {clear: none; width: 25px !important; margin: 0 !important; padding: 0;}
+div.checkbox {clear: left; float: left; width: 95%; margin: 1em 0;}
+
+
+/* Generic Form */
+    fieldset.generic {
+        clear: left; float: left;
+        width: 98%;
+        padding: 1%; margin-top: 1em;
+        /*border: 1px dotted rgba(255, 255, 255, .7);
+        -moz-border-radius: 3px;
+        -webkit-border-radius: 3px;
+        border-radius: 3px; */
+    }
+    
+    fieldset.generic legend {
+        margin-left: -.5em; padding: .25em .35em;
+        color: rgba(255, 255, 255, 1);
+        background: rgba(2, 50, 71, .5);
+        font-size: 150%; font-family: Montserrat;
+        -moz-border-radius: 3px;
+        -webkit-border-radius: 3px;
+        border-radius: 3px;
+    }
+    
+    fieldset.generic label {
+        display: none;
+        float: left; clear: none;
+        margin: .65em .1em .45em 0; padding: .5%;
+        color: rgba(12, 171, 187, .9);
+        background: rgba(2, 50, 71, .6);
+        font-size: 125%; font-family: Montserrat;
+        -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px;
+    }
+        fieldset.generic label.halfMan {margin-left: 2.5%;}
+    
+        fieldset.generic input, 
+        fieldset.generic textarea, 
+        fieldset.generic select {
+            clear: left; float: left;
+            width: 98%; margin: 1% 0;
+            font-size: 175%;
+        }
+            fieldset.generic select {width: 99.5%;}
+            fieldset.generic input[type=file] {font-size: 70%;}
+            fieldset.generic input.halfMan {width: 30%; clear: none;}
+
+    input.go {
+        width: 100%; padding: .5em 1%; margin: 1em 0 1em 0;
+        border-color: rgba(255, 255, 255, .7);
+        font-size: 150%;
+        color: rgba(2, 50, 71, .75);
+        background: rgba(255, 255, 255, .2);
+    }
+    input.go:hover {
+        color: rgba(2, 50, 71, .99);
+        border-color: rgba(12, 171, 187, .5);
+        /* GLOW */
+        -moz-box-shadow: 0px 0px 4px rgba(12, 171, 187, .75);
+        -webkit-box-shadow: 0px 0px 4px rgba(12, 171, 187, .75);
+        box-shadow: 0px 0px 4px rgba(12, 171, 187, .75);
+    }
+    input.go:active {background: #0cabbb; border-color: #023247; color: white;}
+
+
+fieldset#dataView {
+    float: right;
+    width: 10%;
+    border: 1px dotted rgba(12, 171, 187, .3);
+    -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px;
+    font-size: 75%;
+    padding: .5%;
+}
+fieldset#dataView legend {display: none;}
+fieldset#dataView .checkbox {margin: 0; padding: .35em;}
+fieldset#dataView label {margin: 0; padding: 0;}
+fieldset#dataView input, 
+fieldset#dataView select {
+    clear: left; float: left;
+    margin: 0; padding: 0;
+    width: 100%;
+}
+/*fieldset#dataView select {font-size: 115%;}*/
+
+
+/* Google Analytics Settings */
+#analyticsSettings {
+    width: 100%; margin: 0; padding: 0;
+}
+
+#analyticsSettings.preset {
+    clear: left; float: left;
+    width: 98%; margin: 1% 0; padding: .5%;
+    font-size: 175%;
+    background: #eee;
+    border: 1px solid #ddd;
+    -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px;
+    color: rgba(2, 50, 71, .75);
+    border: 1px solid rgba(2, 50, 71, .35);
+        /* GLOW */
+        -moz-box-shadow: 0px 0px 5px rgba(2, 50, 71, .35);
+        -webkit-box-shadow: 0px 0px 5px rgba(2, 50, 71, .35);
+        box-shadow: 0px 0px 5px rgba(2, 50, 71, .35);
+}
+#analyticsSettings:hover {cursor: pointer;}
+
+
+section#gaGoals {
+    clear: left; float: left;
+    padding: .5em; margin: 0;
+    border: 1px solid green;
+}
+
+
+/* ++ Form Error Messages ++ */
+span.message {
+    clear: left; float: left;
+    width: 99%; padding: .5em 0; margin-top: -.5em;
+    text-indent: .5em; font-size: 100%;
+    border: 1px solid #eee;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+}
+
+span.message li {list-style: none;}
+
+span.error {
+    background: #e9c7ca;
+    color: #bf202e;
+    border-color: #bf202e;
+}
+span.ok {background: #fff; color: #104e87; border-color: #104e87;}
+input.error, 
+textarea.error, 
+select.error {border-color: #bf202e;}
+
+input.error:focus, 
+textarea.error:focus, 
+select.error:focus {
+        /* GLOW */
+        -webkit-box-shadow: 0px 0px 5px rgba(191, 32, 46, 0.75);
+        -moz-box-shadow:    0px 0px 5px rgba(191, 32, 46, 0.75);
+        box-shadow:         0px 0px 5px rgba(191, 32, 46, 0.75);
+    }
+/* ----- CLOSE >> FORMS ----- */
+
+
+
+
+img.zenMonkey {float: left; width: 30%;}
+
+.jumbo {font-size: 150%;}
+.pass {color: rgba(203, 219, 41, 1);}
+.fail {color: rgba(241, 102, 57, 1);}
+.smaller {font-size: 85%;}
+
+
+
+/* ++++++++++++++ OPEN > TABLES +++++++++++++++++ */
+table {width: 100%; background: transparent;}
+table.visualDetails {border: 1px dotted rgba(12, 50, 71, .65); margin-bottom: 1em;}
+    table tr {}
+        table tbody tr:hover {background: rgba(2, 50, 71, .025);}
+        #bodied table tbody tr:hover a:link {/*color: rgba(2, 50, 71, .8);*/}
+        #bodied table tbody tr:hover a:visited {/*color: rgba(2, 50, 71, .8);*/}
+        #bodied table tbody tr:hover a:hover {/*color: rgba(12, 171, 187, .8);*/}
+    /*table a:link {color: rgba(2, 50, 71, .8);}
+    table a:visited {color: rgba(2, 50, 71, .8);}*/
+    
+    table th, 
+    table td {
+        border-bottom: 1px dotted rgba(12, 171, 187, .25);
+        text-align: center; vertical-align: middle;
+    }
+    table th {
+        padding: .4em 0;
+        font-size: 120%;
+        color: rgba(12, 50, 71, .85);
+        background: rgba(12, 171, 187, .04);
+        border-bottom: 1px solid rgba(12, 50, 71, .65);
+    }
+        table tfoot th {background: rgba(255, 255, 255, .5); color: rgba(2, 50, 71, .8);}
+    table td {
+        padding: .35em 0;
+        background: transparent;
+    }
+    td.sealTableBottom {border-bottom-color: rgba(12, 50, 71, .65);}
+    /* table links */
+    table th a:link, 
+    table td a:link {
+        color: rgba(2, 50, 71, .75);
+    }
+    table th a:visited, 
+    table td a:visited {
+        color: rgba(2, 50, 71, .75);
+    }
+    
+    table td.longerCell {width: 85%;}
+
+    /* left, right, left */
+    table th.leftLeft, 
+    table td.leftLeft {
+        text-align: left;
+        text-indent: .35em;
+    }
+    table th.rightRight, 
+    table td.rightRight {
+        text-align: right;
+        padding-right: .5em;
+    }
+    table th.centerCenter, 
+    table td.centerCenter {
+        text-align: center;
+    }
+    table span.percentage {font-size: 85%;}
+
+    /* Tooltips */
+    table aside {
+        position: absolute;
+        max-width: 26em;
+        margin: 0; padding: .5em;
+        border: 1px solid #dfdfdf;
+        background: #eee;
+        text-align: left; font-size: 85%;
+    }
+        table aside p {font-size: 85%;}
+        table aside ol {
+            padding: 0; margin: .5em; margin-top: .25em;
+            font-size: 85%;
+        }
+            table aside ol li {
+                display: block;
+                width: 100%; padding: .25em 0;
+            }
+/*
+tr.tableTotals td {background: #fefefe; border-bottom: 1px solid #ccc;}
+tr.folder {cursor: pointer;}
+tr.folder td {background: #eee;}
+tr.page {font-size: 85%;}
+*/
+    /* OPEN > Table Columns */
+    /*
+    th.starryNight, td.starryNight {width: 40px;}
+    th.pagePath, td.pagePath {width: 50%;}
+    */
+    /* CLOSE > Table Columns */
+
+/* -------------- CLOSE > TABLES ---------------- */
+
+
+
+
+
+/* ++++++++++++++++++++++ Leaderboard ++++++++++++++++++++++ */
+    #leaderboard {
+        position: relative;
+        clear: left; float: left;
+        width: 100%; margin: 0; padding: 0;
+        /*background: #cfd8dc;*/
+    }
+    
+    /* Container for project leaderboard card */
+    .leaders {
+            position: relative;
+            clear: left; float: left;
+            width: 94%; margin: .1em 2%; padding: 1%;
+            border: 1px solid rgba(2, 50, 71, .1);
+                -moz-border-radius: 3px;
+                -webkit-border-radius: 3px;
+                border-radius: 3px;
+        }
+    .leaders .edit {
+        display: none;
+        position: absolute; bottom: 0; left: 0;
+    }
+    .leaders section.projectInfo {float: left; width: 100%; padding: 0; margin: 0;}
+    /* Logo */
+    .leaders img.projectLogo {
+        display: none;
+        float: left;
+        width: 5%; margin-right: .5em;
+        /*border: .25em solid #eaf2f9;*/
+    }
+    /* Name */
+    #bodied .leaders h3 {
+        clear: none; display: inline;
+        width: 90%; margin: 0; padding: 0;
+        font-size: 200%;
+    }
+        /*#bodied .leaders h3 a {}
+        #bodied .leaders h3 a:hover {color: rgba(12, 171, 187, 1);}*/
+    /* Description */
+    .leaders p {
+            clear: left; display: block;
+            width: 100%;
+            font-size: 100%; color: #333;
+        }
+    
+    .leaders section.leaderScorecard {
+        position: relative;
+        float: right;
+        width: 40%; padding: 0; margin: 0;
+    }
+        .scoreContainer {float: left; width: 33%; margin-top: 0;}
+        .projectScore {margin-top: 0;}
+            /* Health, ROI, Juice Scores */
+            .leaders h5 {
+                display: inline;
+                clear: left; float: left;
+                width: 90%; margin: .25em 0 .2em 0; padding: 0;
+                font-size: 150%; text-align: center;
+            }
+                #bodied .leaders h5 {color: rgba(255, 255, 255, .6);}
+                #bodied .leaders h5.highlight {color: rgba(255, 255, 255, .8);}
+            .leaders h6 {
+                position: relative;
+                display: inline;
+                clear: left; float: left;
+                width: 90%; margin: 0; padding: 0;
+                font-size: 200%; text-align: center;
+            }
+            
+            .leaders h6 div.flow {height: 5em; background: rgba(12, 171, 187, .5);}
+            .leaders h6 div.flowBack {background: rgba(2, 50, 71, .6);}
+            
+            .leaders h6 div span {margin-top: 2em; font-size: 150%; color: #f1fafb;}
+            /* Scorecard Details */
+            ol.leadersScoreDetails {display: none;} /* Only used in presentation mode */
+    
+    /* Edit | Last Refresh */
+    .leaders cite.manageEdit {
+        display: block;
+        clear: left;
+        width: 100%; margin-top: 1em;
+        text-align: left; font-size: 80%;
+    }
+/* ------------------------- CLOSE > Leaderboard ------------------------ */
+
+
+
+
+
+/* +++++ OPEN >> Content Containers +++++ */
+#columnForm {
+    clear: none; float: left;
+    width: 68%; margin: 0 1%; padding: 0;
+    /*background: #cfd8dc;*/
+}
+    /* shaded area: */
+    #columnForm > div {
+        clear: left; float: left;
+        width: 97%; margin: .5em 1%; padding: 1.5%;
+        background: rgba(255, 255, 255, .3);
+            -moz-box-shadow: 0px 0px 7px 3px rgba(2, 50, 71, .15);
+            -webkit-box-shadow: 0px 0px 7px 3px rgba(2, 50, 71, .15);
+            box-shadow: 0px 0px 7px 3px rgba(2, 50, 71, .15);
+        border: 1px solid rgba(2, 50, 71, .1);
+            -moz-border-radius: 3px;
+            -webkit-border-radius: 3px;
+            border-radius: 3px;
+    }
+
+#columnAll {
+    clear: left; float: left;
+    width: 100%; margin: 0; padding: 0;
+    /*background: #cfd8dc;*/
+/*    background: rgba(207, 216, 220, .3); */
+    /*background-image:url('../images/cosmic-fabric.jpg');*/
+    /*background: #023247;*/
+}
+    #columnAll > div {
+        clear: left; float: left;
+        width: 98%; margin: .25em 1%; padding: 0;
+        /*border: 1px solid #c4c3c3;*/
+        background: rgba(255, 255, 255, .3);
+    }
+
+#columnLeft {
+    clear: left; float: left;
+    width: 61%; padding: 0; margin: 0; margin-right: 1%;
+    background: #cfd8dc;
+}
+    /* All divs are content sections within padded background */
+    #columnLeft > div {
+        clear: left; float: left;
+        width: 92%; margin: 1em 2%; padding: 2%;
+        border: 1px solid #c4c3c3;
+        background: #fff;
+    }
+        /* User Profile Card to left of details */
+        img#profilePictureLarge {clear: none; float: left; height: 8em; border: 1px solid #023247;}
+        
+        /* Main detail section */
+        #profileDetails div {
+            clear: none; float: left;
+            width: 65%; margin-left: 1%;
+            /*background: #eee;*/
+        }
+            #profileDetails div h6 {padding: .25em 0 .15em 0;}
+                #profileDetails div ul {margin-top: .1em;}
+                    #profileDetails div ul li {padding: .1em 0; font-size: 80%; color: #777;}
+                    #profileDetails div ul li strong {color: #023247;}
+                    #profileDetails div ul li:first-child strong {color: #0cabbb;}
+                    #profileDetails div ul li strong:after {content: ': ';}
+        /* Close User Profile Card */
+    
+
+#columnRight {
+    clear: none; float: left;
+    width: 38%; margin: 0; padding: 0;
+    background: #cfd8dc;
+}
+    #columnRight > div {
+        clear: left; float: left;
+        width: 92%; margin: 1em 2%; padding: 2%;
+        border: 1px solid #c4c3c3;
+/*            border-left-color: #ccc; border-bottom-color: #ccc; */
+        background: #fff;
+    }
+
+
+/* New Chart Annotation */
+#closeCreateAnnotation {z-index: 10000; position: absolute; top: 0; left: 2%;}
+    #closeCreateAnnotation:hover {cursor: pointer;}
+
+#createAnnotationContainer {
+    z-index: 9998;
+    position: absolute; top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: #023247;
+}
+/* close > New Chart Annotation */
+
+/* ++ New Post ++ */
+#closeNewPost, 
+#statVisualizationMoreCloser {
+    z-index: 10001;
+    position: absolute; top: 1em; left: 2%;
+}
+    #closeNewPost:hover, 
+    #statVisualizationMoreCloser:hover {cursor: pointer;}
+
+#createNewPost, 
+#statVisualizationMore {
+    z-index: 9999;
+    position: absolute; top: 0; left: 0;
+    width: 100%; min-height: 100%;
+    background: #023247;
+    background: rgba(1, 50, 70, 0.9);
+}
+
+.statVisualizationDetails {
+    clear: left; float;
+    width: 90%; margin: 2em 3%; padding: 2%;
+    border: 1px solid rgba(241, 102, 57, 1);
+    background: rgba(255, 255, 255, 1);
+}
+.statVisualizationDetails h1 {font-size: 200%; color: rgba(12, 171, 187, 1); margin-bottom: 1em;}
+/* close > New Post */
+
+
+
+/* Small Profile Cards (project collaborators */
+.profileDetailsSmall {
+    position: relative;
+    clear: left; float: left;
+    width: 98%; margin: 0; padding: 1%;
+    border: 1px solid #eee;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    font-size: 85%;
+}
+img.profilePictureSmall {
+    clear: none; float: left;
+    height: 3em; margin-right: .5em;
+    border: 1px solid #efefef;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+}
+.profileDetailsSmall cite {
+    position: absolute; right: .5em; top: 32%;
+    height: 1em; width: 1em;
+    padding: .25em;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    background: #0cabbb;
+    font-size: 65%; text-align: center;
+}
+
+
+
+
+
+/* Ticker */
+#timelineFilters {
+    clear: left; float: left;
+    width: 100%;
+    /*background: #e7f7f8;*/
+}
+    #timelineFilters fieldset {
+        clear: left; float: left;
+        width: 30%; padding: 0 1%;
+        /*background: #eee;*/
+    }
+        #timelineFilters fieldset label {clear: left; float: left; width: 20%; /*background: #ccc;*/}
+        #timelineFilters fieldset select {clear: none; float: left; width: 70%;}
+    
+    #timelineFilters input[type=search] {clear: none; float: left; width: 53%;}
+    #timelineFilters input[type=submit] {width: 15%;}
+
+#timelineChart {
+    clear: both; float: left;
+    margin: 1%; padding: 0;
+    width: 98%; height: 25em;
+    border-top: 1px dotted rgba(184, 231, 235, .8);
+}
+
+/* ----- CLOSE >> Profile ------------- */
+
+
+
+
+#addNewCompetitor,
+#editCompetitors {
+    clear: none; float: left;
+    margin: .5em; padding: .75em 1.45em;
+    border: 1px dotted #eee; border-radius: .15em;
+    color: #ccc; font-size: 110%;
+}
+
+#addNewCompetitor:hover,
+#editCompetitors:hover {cursor: pointer; color: #0cabbb; border-color: #0cabbb;}
+
+.delete {
+    position: absolute; right: 9%;
+    margin-top: .7em;
+    color: red; font-weight: bold; font-size: 150%;
+}
+.delete:hover {cursor: pointer;}
+
+
+
+
+
+
+/* +++++ OPEN > Scoring Pages (ROI, Health, Juice) +++++ */
+#bodied .statPackage {
+    clear: left; float: left;
+    width: 100%; margin: 0; padding: 0;
+    /*background: pink;*/
+}
+
+    #bodied .stats {
+        clear: left; float: left;
+        width: 100%; margin: 0; padding: 0;
+        /*background: rgba(12, 171, 187, .1);*/
+    }
+        #bodied .stats > section {
+            clear: none; float: left;
+            width: 30%; padding: 0; margin: 0 0 0 2.5%;
+            /*background: maroon;*/
+        }
+            #bodied .stats h2 {
+                clear: none; float: left;
+                font-size: 150%;
+                padding: .5em 0 .25em 0;
+                /*color: rgba(255, 255, 255, .75);*/
+            }
+                #bodied .stats h2.activated {color: rgba(12, 171, 187, 1);}
+            #bodied .stats ol {
+                clear: none; float: left;
+                width: 100%; padding: 0; margin: 0;
+                font-family: Montserrat;
+                /*background: yellow;*/
+            }
+                #bodied .stats ol > li {
+                    position: relative;
+                    display: block;
+                    clear: left; float: left;
+                    width: 98%; padding: .5em 1%; margin: 0;
+                    background: rgba(12, 171, 187, .1);
+                    color: rgba(2, 50, 71, .8);
+                    font-size: 115%;
+                }
+                #bodied .stats ol > li:hover {
+                    cursor: pointer;
+                    background: rgba(12, 171, 187, .15);
+                    /*color: rgba(2, 50, 71, .8); should match active below*/
+                    color: rgba(12, 50, 71, 1);
+                }
+                #bodied .stats ol > li.active {
+                    background: rgba(12, 171, 187, .15);
+                    /*color: rgba(2, 50, 71, .8); should match hover*/
+                    color: rgba(12, 50, 71, 1);
+                }
+                #bodied .stats ol > li.active div.stat {background: rgba(210, 239, 242, .5);}
+                /* Question Mark */
+                #bodied .stats ol > li cite {
+                    display: none;
+                    position: absolute; right: .5em; top: 32%;
+                    height: 1em; width: 1em;
+                    padding: .25em;
+                    border: 1px solid #ccc;
+                    border-radius: 50%;
+                    /*background: #0cabbb;*/
+                    background: rgba(12, 171, 187, .3);
+                    font-size: 65%; text-align: center;
+                }
+                    #bodied .stats ol > li cite:hover {border-color: #023247;}
+                #bodied .stats ol > li cite a {
+                    padding: .2em;
+                    color: #0cabbb;
+                    text-decoration: none;
+                }
+                  #bodied .stats ol > li cite:hover a {color: #fff;}
+                #bodied .stats ol > li.active cite {display: inline;}
+                
+
+                #bodied .stats ol > li div.stat {
+                    clear: none; float: left;
+                    /*width: 15%;*/ padding: .35em; margin: 0 4% 0 2%;
+                    border: 1px dotted #0cabbb;
+                    font-size: 115%;
+                    text-align: center;
+                    background: rgba(210, 239, 242, .3);
+                    color: rgba(2, 50, 71, .9);
+                }
+                #bodied .stats ol > li div.statDesc {
+                    margin-top: .5em;
+                }
+    
+    #bodied .searchContainer {
+        width: 100%;
+        margin: 0; padding: 0;
+    }
+    
+    /* All Search Query Inputs */
+    #bodied .searchContainer input {
+        margin: 0; padding: 0.25em;
+        font-size: 120%;
+        border: 1px solid #eee;
+        box-shadow: 0px 0px 0px transparent;
+    }
+        #bodied .searchContainer input:hover {border: 1px solid #ddd; box-shadow: 0px 0px 0px transparent;}
+        #bodied .searchContainer input:focus {border-color: rgba(12, 171, 187, .2);}
+    
+    #bodied .searchContainer input#filterQuery {
+        width: 35%;
+    }
+    
+    #bodied .searchContainer input#submitFilterPages {
+        width: 10%;
+        border-color: #ddd;
+    }
+        #bodied .searchContainer input#submitFilterPages:hover {border: 1px solid #ccc;}
+    
+    #bodied #statVisualization {
+        clear: left; float: left;
+        width: 100%; padding: 0; margin: 0;
+        border: 3px solid rgba(12, 171, 187, .1); border-width: 2px 0px 1px 0px;
+        background: rgba(255, 255, 255, 1);
+        /*background: #CFD8DC;*/
+    }
+        #bodied #statVisualizationSquare {
+            clear: left; float: left;
+            height: 20em; width: 30%; max-width: 30%; padding: 0; margin: 1em 0 1em 2.5%;
+            /*border: 1px dotted #0cabbb;*/
+            /*background: white;*/
+        }
+        
+            /* not used */
+            #bodied #statVisualizationSquare ul li,
+            #bodied #statVisualizationSquare ol li {
+                line-height: 1.25em;
+                font-size: 175%;
+            }
+            #bodied #statVisualizationSquare ul li strong,
+            #bodied #statVisualizationSquare ol li strong {
+                color: rgba(2, 50, 71, .85);
+                font-size: 60%;
+            }
+        
+        #bodied #statVisualizationLandscape {
+            clear: none; float: left;
+            height: 20em; width: 63.5%; max-width: 63.5%;
+            padding: 0; margin: 1em 0 1em 2.5%;
+            /*border: 1px dotted #0cabbb;*/
+            /*background: white;*/
+        }
+        .appIcons {
+            margin-top: 1em;
+        }
+        .appIcons li {
+            display: inline;
+            clear: none; float: left;
+            margin-left: .5em;
+        }
+        .appIcons img {
+            border: 1px solid rgba(255, 255, 255, .5);
+            -moz-border-radius: 3px;
+            -webkit-border-radius: 3px;
+            border-radius: 3px;
+        }
+        
+
+#statVisualizationMore {z-index: 10000;}
+
+/* ----- CLOSE > Scoring Pages -----*/
+
+
+
+/* +++++ FOOTER +++++ */
+#footer {
+    clear: left; float: left;
+    width: 100%; margin: 2em 0 0 0; padding: .5em 0;
+    /*border-bottom: 1px solid #023247;*/
+    text-align: center; /*background: #023247;*/ color: #f0fafb;
+    font-size: 75%;
+}
+/* ----- FOOTER ----- */
+
+
+/* ------------------------- CLOSE >> GLOBALS ------------------------------------- */
+
+
+
+
+/*
+[][][][][][][]  RESPONSIVE LAYOUTS via MEDIA QUERIES  [][][][][][]
+*/
+
+
+/* ++++++ Mobile [m] (Portrait and Landscape) ++++++++++++++++++++++++ */
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+    /* [m] Global Styles */
+    input {padding: 2% .5%;}
+    fieldset.generic input, 
+    fieldset.generic textarea, 
+    fieldset.generic select {
+        margin: 1.5% 0;
+    }
+    body {
+        font-family: sans-serif;
+        /*background-color: rgba(2, 50, 71, 1);
+        background-image: url('../images/mainBKG.jpg');*/
+    }
+    header {margin-bottom: 0;}
+    /*header nav > ol {display: none;}*/
+    #bodied {margin: 0; width: 100%;}
+    #columnForm {
+        width: 100%;
+        margin: 0; padding: 0;
+        font-size: 90%;
+    }
+        #columnForm > div {
+            /*margin: 0; width: 100%; padding: 0;*/
+            -moz-box-shadow: 0px 0px 0px 0px rgba(2, 50, 71, .2);
+            -webkit-box-shadow: 0px 0px 0px 0px rgba(2, 50, 71, .2);
+            box-shadow: 0px 0px 0px 0px rgba(2, 50, 71, .2);
+        border: 0;
+/*            -moz-border-radius: 3px;
+            -webkit-border-radius: 3px;
+            border-radius: 3px;*/
+        }
+    #columnLeft {width: 100%;}
+    #columnRight {display: none;}
+    img#profilePictureLarge {height: 5em;}
+    #profileDetails div ul {display: none;}
+    
+        #bodied .stats > section {width: 100%; margin: 0; padding: 0;}
+        #bodied .stats ol > li {padding-top: 1em; padding-bottom: 1em;}
+        
+        /* Authentication */
+        img.zenMonkey {display: none;} /* hide monkey on [m,p], add monkey as background to fieldset */
+    
+        /* Leaderboard */
+        .leaders {z-index: 1; width: 90%;}  /* reduce width on all mobile */
+        #leader_position_1 {margin-top: 4em;}
+        section.projectInfo {width: 60%;} /*  */
+            .leaders h3 {font-size: 100%;}  /* reduce font size on all mobile */
+            .leaders p {font-size: 85%;}
+            .leaders div.scoreContainer {display: none;}
+            .leaders .leaderScorecard {width: 25%;}
+            .leaders div.projectScore {display: inline; width: 100%; font-size: 100%; }
+            .leaders div.projectScore h5,
+            .leaders div.projectScore h6 {font-size: 100%; width: 100%; padding: .15em;}
+            .leaders cite.manageEdit {width: 100%; font-size: 40%;}
+            .leaders .edit {display: none;}
+}
+/* -------------- CLOSE > [m] ------------------------------ */
+/* ++++++++++++++ Mobile Portrait [m,p] ++++++++++++++++++++ */
+    @media only screen 
+    and (min-device-width : 320px) 
+    and (max-device-width : 480px)
+    and (orientation : portrait) {
+        /* Global Styles */
+        body {}
+        label {display: none;}  /* remove labels to save horizontal space */
+        
+            /* Authentication */
+            
+        
+            /* Leaderboard */
+            .leaders img.projectLogo {width: 12%;}
+            .leaders p {display: none;} /* hide the description to make more room */
+            /*.leaders div.projectScore {margin-top: 0; background: blue;}*/
+        
+    }
+/* -------------- CLOSE > [m,p] ---------------------------- */
+/* ++++++++++++++ Mobile Landscape [m,l] +++++++++++++++++++ */
+    @media only screen 
+    and (min-device-width : 320px) 
+    and (max-device-width : 480px)
+    and (orientation : landscape) {
+        /* Global Styles */
+/*        header, footer {padding: 1em;}
+        header h1, footer h1 {font-size: 85%;}
+        */
+        
+            /* Authentication */
+            
+            /* Leaderboard */
+            #leader_position_1 {margin-top: 6em;}
+    }
+/* -------------- CLOSE > [m,l] ---------------------------- */
+
+
+@media only screen 
+and (max-width : 1024px) {
+    /* Global Styles */
+    
+        /* Authentication */
+        
+        /* Leaderboard */
+    
+}
+/* ++++++++++++++ iPad (PORTRAIT and LANDSCAPE) ++++++++++++++ */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) {
+    /* Global Styles */
+    body{font-size: 80%;}
+    
+        /* Authentication */
+        
+        /* Leaderboard */
+        .leaders h3 {font-size: 200%;}
+        .leaders p {font-size: 85%;}
+        .leaders h5 {font-size: 150%;}
+    
+}
+/* -------------- CLOSE > [t] ------------------ */
+/* ++++++++++++++ iPad (PORTRAIT) ++++++++++++++ */
+    @media only screen 
+    and (min-device-width : 768px) 
+    and (max-device-width : 1024px) 
+    and (orientation : portrait) {
+        /* Global Styles */
+        #columnForm {width: 98%;}
+        #columnLeft {width: 100%;}
+        #columnRight {display: none;}
+        
+        #bodied #statVisualizationSquare {width: 95%; max-width: 95%;}
+        #bodied #statVisualizationLandscape {display: none;}
+
+            /* Authentication */
+            img.zenMonkey {display: none;}
+            /*img.zenMonkey {width: 40%; padding: 0 30%;}*/
+            
+            /* Leaderboard */
+    }
+/* -------------- CLOSE > [t,p] ----------------- */
+/* ++++++++++++++ iPad (LANDSCAPE) ++++++++++++++ */
+    @media only screen 
+    and (min-device-width : 768px) 
+    and (max-device-width : 1024px) 
+    and (orientation : landscape) {
+        /* Global Styles */
+        #bodied #statVisualizationSquare {display: none;}
+        #bodied #statVisualizationLandscape {width: 95%; max-width: 95%; height: 30em;}
+        
+            /* Authentication 
+            img.zenMonkey {width: 40%;}
+            fieldset.authenticate {width: 55%;}
+            */
+            /* Leaderboard */
+            
+
+    }
+/* -------------- CLOSE > [t,l] ------------------ */   
+/* ++++++++++++++ Presentation Mode ++++++++++++++ */
+@media only screen 
+and (min-width : 1824px) {
+    /* Global Styles */
+    body {font-size: 150%;}
+        /* Authentication */
+                
+        /* Leaderboard */
+        .leaders img.projectLogo {width: 12%;}
+     /*   .leaders h3 {font-size: 500%;}
+        .leaders p {font-size: 150%;} */
+        ol.leadersScoreDetails {display: inline;}
+        /*.leaders cite.manageEdit {font-size: 100%;} */
+        
+}
+/* -------------- CLOSE > Presentation ------------------ */
+
+
+/* ++++++++++++++ Anything Small (650px and below) ++++++++++++++  */
+@media only screen 
+and (max-width : 650px) {
+    /* Global Styles */
+    body {font-size: 75%;}
+    nav {font-size: 85%; margin-top: .5em;}
+    #columnLeft {width: 100%;}
+    #columnRight {display: none;}
+    #columnForm {width: 98%;}
+        #columnForm > div > h1 {display: none;}
+    
+    fieldset.generic input[type=file] {display: none;}
+    
+    /* Forms */
+    
+    fieldset.generic {border-color: transparent;}
+    fieldset.generic legend {padding: .25em; margin: 0; font-size: 250%;}
+    .delete {right: 11.5%;}
+    
+        /* Authentication */
+        img.zenMonkey {display: none;}
+        span.loginFail {font-size: 200%;}
+        
+        /* Body Health */
+        #bodied #statVisualizationSquare {width: 95%; max-width: 95%;}
+        #bodied #statVisualizationLandscape {display: none;}
+        #bodied .stats h5 {font-size: 135%;}
+        /* remove (?) with javascript */
+        
+        /* Leaderboard */
+        .leaders {padding: 3% 1%; /*font-size: .5em;*/}
+        .leaders p {display: none;} /* hide the description to make more room */
+        
+        /* Ticker */
+        #filterOptions {display: none;}
+            #timelineFilters input[type=search] {width: 85%;}
+        #timelineChart {display: none;} /* chart ticker */
+        
+}
+/* -------------- CLOSE > FEED ---------------------- */
+
+
+/* ++++++++++++++ RETINA ++++++++++++++ */
+@media
+only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) {
+    /* Global Styles */
+}
+/* -------------- CLOSE > RETINA ---------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
