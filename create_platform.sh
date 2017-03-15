@@ -2,6 +2,6 @@
 
 source aws_config.sh
 
-cd custom_platform
+cd dev_platform
 ebp create $@
 

@@ -18,10 +18,6 @@ wait_for_cloudinit() {
         echo "Still bootstrapping.. sleeping. "
         sleep 3;
     done
-
-    rm -f /var/lib/apt/lists/*
-    apt-get clean
-
 }
 
 run_command () {

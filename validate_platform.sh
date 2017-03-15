@@ -2,6 +2,6 @@
 
 source aws_config.sh
 
-cd custom_platform
+cd dev_platform
 packer validate custom_platform.json
 

@@ -18,8 +18,10 @@ echostderr "Setting up development environment"
 echo "Installing RabbitMQ"
 apt-get install -y rabbitmq-server
 rabbitmq-plugins enable rabbitmq_management
-rabbitmqctl add_user vincent simian#symposium
-rabbitmqctl set_permissions vincent ".*" ".*" ".*"
+
+##rabbitmqctl add_user vincent simian#symposium
+#rabbitmqctl delete_user guest
+#rabbitmqctl set_permissions vincent ".*" ".*" ".*"
 
 #################
 # Mongo
