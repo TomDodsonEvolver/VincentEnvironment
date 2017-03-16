@@ -1,0 +1,30 @@
+{
+    "variables": {
+        "platform_name": "Vincent Server",
+        "platform_version": "1.0.0",
+        "platform_arn": ""
+    },
+    "builders": [{
+        "type": "amazon-ebs",
+        "access_key": "{{user `aws_access_key`}}",
+        "secret_key": "{{user `aws_secret_key`}}",
+        "region": "us-east-1",
+        "source_ami": "ami-f0822de6",
+        "instance_type": "t2.micro",
+        "ssh_username": "ubuntu",
+        "ami_name": "Vincent Server {{timestamp}}"
+    }],
+    "provisioners": [
+    {
+        "type": "file",
+        "source": "builder",
+        "destination": "/tmp"
+    },
+    {
+        "type": "shell",
+        "execute_command": "chmod +x {{ .Path }}; {{ .Vars }} sudo {{ .Path }}",
+        "scripts": [
+            "builder/builder.sh"
+        ]
+    }]
+}

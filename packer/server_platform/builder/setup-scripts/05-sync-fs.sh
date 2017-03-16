@@ -1,0 +1,1 @@
+../../../scripts/05-sync-fs.sh
