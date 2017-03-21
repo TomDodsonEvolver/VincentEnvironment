@@ -26,5 +26,9 @@
         "scripts": [
             "builder/builder.sh"
         ]
+    }],
+    "post-processors": [{
+        "type": "vagrant",
+        "output": "vincent_dev.box"
     }]
 }

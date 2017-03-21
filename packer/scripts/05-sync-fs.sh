@@ -21,6 +21,7 @@ if [ -d /var/www/errors/ ]; then
     chmod -R 644 /var/www/errors
 fi
 
-
-
+mkdir -p /var/www/ideaevolver.com
+chown -R ubunutu.ubunutu /var/www/ideaevolver.com
+chmod -R 755 /var/www/ideaevolver.com
 
