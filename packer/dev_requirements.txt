@@ -77,7 +77,7 @@ prettytable==0.7.2
 prompt-toolkit==1.0.9
 ptpython==0.36
 pusher==1.6
-py==1.4.23
+py==1.10.0
 py-bcrypt==0.4
 pyasn1==0.1.7
 pyasn1-modules==0.0.5
