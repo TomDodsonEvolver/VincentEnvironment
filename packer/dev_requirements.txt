@@ -9,7 +9,7 @@ Beaker==1.6.4
 beautifulsoup4==4.4.1
 billiard==3.3.0.19
 bson-lazy==0.2.3
-celery==3.1.17
+celery==5.2.2
 cffi==1.9.1
 Chameleon==2.10
 colander==0.9.9
