@@ -52,7 +52,7 @@ netifaces==0.10.4
 networkx==1.7
 newrelic==2.80.1.61
 nose==1.3.7
-numpy==1.10.1
+numpy==1.21.0
 nx-spatial==0.6.dev0
 oauth2client==1.4.6
 oauthlib==1.0.3
