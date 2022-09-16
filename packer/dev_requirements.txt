@@ -63,7 +63,7 @@ os-virtual-interfacesv2-python-novaclient-ext==0.19
 oslo.config==2.4.0
 oslo.i18n==2.5.0
 oslo.serialization==1.8.0
-oslo.utils==2.4.0
+oslo.utils==4.10.1
 packaging==16.8
 passlib==1.6.2
 Paste==1.7.5.1
